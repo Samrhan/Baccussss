@@ -1,12 +1,13 @@
 import {Component, OnInit} from '@angular/core';
-import {ActivatedRoute, Router} from '@angular/router';
+import {Router} from '@angular/router';
 import {CookieService} from 'ngx-cookie-service';
+import {NavBarreComponent} from '../nav-barre/nav-barre.component';
 
 
 @Component({templateUrl: 'login.component.html'})
 export class LoginComponent implements OnInit {
 
-  constructor(private cookieService: CookieService) {
+  constructor(private cookieService: CookieService, private router: Router, private navbarre: NavBarreComponent) {
   }
 
   ngOnInit(): void {
@@ -22,6 +23,7 @@ export class LoginComponent implements OnInit {
       .then(res => res.json())
       .then(response => {
         this.cookieService.set('user', response.id);
+        this.router.navigateByUrl('');
       })
       .catch(console.error);
   }
