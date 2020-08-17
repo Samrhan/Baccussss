@@ -13,7 +13,6 @@ export class TwitchService {
     method: 'GET',
     headers: {
       Accept: 'application/vnd.twitchtv.v5+json',
-      'Client-ID': 'o57osdr0inxvt1mmz3gk8wvb43ahnx'
     }
   };
 
