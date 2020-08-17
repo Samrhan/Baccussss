@@ -8,7 +8,7 @@ export class TwitchService {
 
   constructor() {
   }
-
+  // Ne marche pas : J'ai enlevé le token
   options = {
     method: 'GET',
     headers: {
