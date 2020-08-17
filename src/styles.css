@@ -1,0 +1,279 @@
+@font-face {
+  font-family: Avenir Black;
+  src: url(assets/fonts/AvenirBlack.otf) format("opentype");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: Avenir Book;
+  src: url(assets/fonts/AvenirBook.otf) format("opentype");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: Avenir Heavy;
+  src: url(assets/fonts/AvenirHeavy.otf) format("opentype");
+  font-weight: 400;
+}
+
+
+@font-face {
+  font-family: Avenir Light;
+  src: url(assets/fonts/AvenirLight.otf) format("opentype");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: Avenir Medium;
+  src: url(assets/fonts/AvenirMedium.otf) format("opentype");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: Avenir Roman;
+  src: url(assets/fonts/AvenirRoman.otf) format("opentype");
+  font-weight: 400;
+}
+
+body {
+  background: #34383c url("assets/Baccusss banniere p.svg") no-repeat;
+  background-size: 200%;
+}
+
+#HomeContainer {
+  color: rgba(255, 255, 255, 0.7);
+  font-family: inherit;
+  font-size: 100%;
+  font-style: inherit;
+  font-weight: inherit;
+}
+
+.scroll-windows {
+  /*Contient tout le texte de la page. Permet d'allouer
+                 des espaces pour le footer et le header qui sont fixes*/
+  width: 99.5vw; /* ( ͡° ͜ʖ ͡°) */
+  position: fixed;
+  max-height: 100vh;
+  overflow-y: scroll;
+  top: 8%;
+  overflow-x: hidden;
+  height: 92%;
+  line-height: 23px;
+  scroll-behavior: smooth;
+  z-index: -1; /* Sinon on ne peut rien selectionner sur le menu déroulant */
+
+}
+
+.scroll-windows::-webkit-scrollbar-track /* Pour la barre de scroll */
+{
+  background-color: transparent;
+}
+
+.scroll-windows::-webkit-scrollbar {
+  width: 13px;
+  background-color: transparent;
+}
+
+.scroll-windows::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
+  background-color: white;
+}
+
+
+@media (min-width: 1000px) {
+  /* Affichage mobile*/
+  #mobile-menu {
+    display: none;
+  }
+}
+
+.main-text {
+  line-height: 23px;
+  font-size: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 50px;
+  max-width: 100%;
+}
+
+.main-text h1 {
+  margin: 0;
+  font-family: Avenir Heavy, sans-serif;
+  color: #fff;
+  padding: 5px 0 10px;
+  font-size: 3vw;
+  line-height: 1.3;
+  text-align: center;
+}
+
+.main-text p {
+  color: #fff;
+  font-family: Avenir Roman, serif;
+  font-size: 1.3vw;
+  margin-bottom: 18px;
+  text-align: center;
+  line-height: 1.8;
+}
+
+.main-button {
+  margin-top: 20px;
+  line-height: 23px;
+  width: 25vw;
+  font-weight: 600;
+  margin-right: 30px;
+}
+
+.main-button button {
+  line-height: 1;
+  cursor: pointer;
+  font-family: Avenir Black, serif, sans-serif;
+  min-height: 32px;
+  display: flex;
+  border-radius: 3px;
+  border: none;
+  justify-content: center;
+  align-items: center;
+  padding: 1vh 3vw;
+  height: 10vh;
+  width: 100%;
+  font-size: 1.4vw;
+}
+
+.main-button #red-button {
+  color: #fff;
+  background-color: #c4302b;
+}
+
+.main-button #black-button { /*Bouton page principale*/
+  color: #fff;
+  background-color: black;
+}
+
+.main-button #white-button { /*Bouton page principale*/
+  color: #34383c;
+  background-color: white;
+}
+
+.main-button img {
+  width: 25px;
+  height: auto;
+}
+
+@media (max-width: 1000px) {
+  /* Affichage mobile*/
+  .main-text p {
+    font-size: 30px;
+  }
+
+  .main-text h1 {
+    font-size: 50px;
+  }
+
+  .main-button {
+    width: 500px;
+  }
+
+  .main-button button {
+    height: 100px;
+    font-size: 50px;
+  }
+
+  #search {
+    width: 90%;
+    height: 60px;
+  }
+}
+
+.main-box {
+  padding: 8% 0 20%;
+}
+
+
+.Section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 0;
+  padding-right: 40px;
+  padding-left: 40px;
+  padding-bottom: 12%;
+}
+
+
+.SectionInner {
+  display: flex;
+  align-items: center;
+  max-width: 1440px;
+}
+
+.SectionImg {
+  line-height: 23px;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.SectionImg img {
+  width: 500px;
+  height: auto;
+}
+
+.SectionText {
+  line-height: 23px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding-right: 100px;
+}
+
+.SectionText h1 {
+  font-family: "Avenir Book", serif;
+  color: #fff;
+  padding-bottom: 10px;
+  font-size: 26px;
+  font-weight: 500;
+  line-height: 1.5em;
+}
+
+.SectionText p {
+  font-family: Avenir Light, serif;
+  font-size: 19px;
+  color: black;
+  line-height: 1.8em;
+  margin-top: 5px;
+}
+
+@media (max-width: 1000px) {
+  /* Affichage mobile*/
+  .SectionInner {
+    flex-direction: column;
+  }
+
+  .SectionText {
+    padding-right: 0;
+  }
+
+  .SectionText h1 {
+    font-size: 51px;
+  }
+
+  .SectionText p {
+    font-size: 30px;
+    text-align: justify;
+  }
+}
+
+.twitch {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+
+.twitch div {
+  flex-direction: row;
+}
