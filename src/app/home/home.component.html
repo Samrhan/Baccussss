@@ -1,26 +1,30 @@
-<div class="main-box" id="scroll-begin">
-  <div class="main-text">
-    <img src="assets/logo.png" alt="logo" style="height: 20vh">
-    <h1>Baccussss</h1>
-    <p><em> « Un Streamer exceptionnel, un gameplay toujours au top, vous allez vite devenir accro » <br>Moi</em>
-    </p>
-    <div class="main-button">
-      <button type="button" id="black-button"
-              onclick="document.getElementById('bio').scrollIntoView({behavior: 'smooth', block: 'start', inline: 'nearest'});">
-        <!-- Bouton de scrolling -->
-        Qui suis-je ?
-      </button>
-    </div>
+<app-nav-barre></app-nav-barre>
+<div class="scroll-windows">
+  <div class="main-box" id="scroll-begin">
+    <div class="main-text">
+      <img src="assets/logo.png" alt="logo" style="height: 20vh">
+      <h1>Baccussss</h1>
+      <p><em> « Un Streamer exceptionnel, un gameplay toujours au top, vous allez vite devenir accro » <br>Moi</em>
+      </p>
+      <div class="main-button">
+        <button type="button" id="black-button"
+                onclick="document.getElementById('bio').scrollIntoView({behavior: 'smooth', block: 'start', inline: 'nearest'});">
+          <!-- Bouton de scrolling -->
+          Qui suis-je ?
+        </button>
+      </div>
 
+    </div>
   </div>
+  <section class="Section" id="bio">
+    <div class="SectionInner">
+      <div class="SectionImg"><img src="assets/bacclove.png" alt="bacclove" style="height: 50vh; width: auto"></div>
+      <div class="SectionText"><h1>Salut !</h1>
+        <p>Salut je suis passionné par les jeux vidéos et par le piano ! Restez et vous allez sans doute passer un très
+          bon moment car je vous offrirais ma bonne humeur et mon skill contestable sur les jeux !
+          Si vous avez des suggestions de jeux ou de choses à faire dites le moi, je serais à l'ecoute. bien evidemment
+          !</p></div>
+    </div>
+  </section>
 </div>
-<section class="Section" id="bio">
-  <div class="SectionInner">
-    <div class="SectionImg"><img src="assets/bacclove.png" alt="bacclove" style="height: 50vh; width: auto"> </div>
-    <div class="SectionText"><h1>Salut !</h1>
-      <p>Salut je suis passionné par les jeux vidéos et par le piano ! Restez et vous allez sans doute passer un très
-        bon moment car je vous offrirais ma bonne humeur et mon skill contestable sur les jeux !
-        Si vous avez des suggestions de jeux ou de choses à faire dites le moi, je serais à l'ecoute. bien evidemment
-        !</p></div>
-  </div>
-</section>
+<app-footer></app-footer>

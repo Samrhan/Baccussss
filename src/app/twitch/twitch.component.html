@@ -1,22 +1,26 @@
-<div *ngIf="getFollow()"><a>{{follow}}</a></div>
-<div class="twitch">
-  <div class="twitch-video">
-    <iframe
-      src="https://player.twitch.tv/?channel=baccussss&parent=localhost&autoplay=false"
-      frameborder="0"
-      scrolling="no"
-      allowfullscreen="true"
-      height="480px"
-      width="720px">
-    </iframe>
-  </div>
-  <div class="twitch-chat">
-    <iframe
-      frameborder="0"
-      scrolling="no"
-      src="https://www.twitch.tv/embed/baccussss/chat?darkpopout&parent=localhost"
-      height="480px"
-      width="320px">
-    </iframe>
+<app-nav-barre></app-nav-barre>
+<div class="scroll-windows">
+  <div class="twitch">
+    <div class="twitch-video">
+      <iframe
+        src="https://player.twitch.tv/?channel=baccussss&parent=localhost&autoplay=false"
+        frameborder="0"
+        scrolling="no"
+        allowfullscreen="true"
+        height="480px"
+        width="720px">
+      </iframe>
+    </div>
+    <div class="twitch-chat">
+      <iframe
+        frameborder="0"
+        scrolling="no"
+        src="https://www.twitch.tv/embed/baccussss/chat?darkpopout&parent=localhost"
+        height="480px"
+        width="320px">
+      </iframe>
+    </div>
   </div>
 </div>
+<app-footer></app-footer>
+
