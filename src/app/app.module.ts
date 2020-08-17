@@ -7,6 +7,7 @@ import {FooterComponent} from './footer/footer.component';
 import {HomeComponent} from './home';
 import {TwitchComponent} from './twitch';
 import {LoginComponent} from './login';
+import { LogstateComponent } from './logstate/logstate.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import {LoginComponent} from './login';
     FooterComponent,
     HomeComponent,
     TwitchComponent,
-    LoginComponent
+    LoginComponent,
+    LogstateComponent
   ],
   imports: [
     appRoutingModule,
