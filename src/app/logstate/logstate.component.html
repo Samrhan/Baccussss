@@ -1,1 +1,11 @@
-<p>logstate works!</p>
+<div *ngIf="loged" id="profile" (click)="redirect()">
+  <img src="https://cdn.discordapp.com/avatars/{{userId}}/{{avatar}}.webp?size=32" alt="avatar">
+  <a>
+    {{tag}}
+  </a>
+</div>
+<div id="loginbutton" *ngIf="!loged">
+  <a routerLink="login">
+  Se connecter
+  </a>
+</div>

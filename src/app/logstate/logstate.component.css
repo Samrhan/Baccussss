@@ -1,0 +1,63 @@
+#loginbutton {
+  display: flex;
+  font-size: 1.2vw;
+  align-items: center;
+  color: white;
+  cursor: pointer;
+  min-height: 32px;
+  min-width: 60px;
+  border-radius: 5%;
+  border: solid 1px black;
+  padding: .1vh 1.2vw;
+  background: #7A2134;
+  transition: transfrom .5s;
+}
+
+#loginbutton a {
+  font-family: "Avenir Book", serif;
+  color: white;
+  text-decoration: none;
+}
+
+#loginbutton a:visited{
+  color: white;
+  text-decoration: none;
+}
+
+#loginbutton:hover{
+  transform: scale(1.02);
+}
+
+#profile{
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  align-content: center;
+  border-radius: 5%;
+  border: solid 1px black;
+  padding: .3vh 1.2vw;
+  background: #F2B3CA;
+}
+#profile img{
+  color: rgba(255,255,255,0.7);
+  line-height: 23px;
+  cursor: pointer;
+  vertical-align: baseline;
+  background-size: 30px;
+  width: 30px;
+  height: 30px;
+  min-height: 30px;
+  min-width: 30px;
+  border-radius: 50%;
+}
+#profile a{
+  line-height: 23px;
+  cursor: pointer;
+  box-sizing: border-box;
+  border: 0;
+  font-family: "Avenir Book", serif;
+  font-size: 1.2vw;
+  text-overflow: ellipsis;
+  padding-left: 1vw;
+  color: black;
+}

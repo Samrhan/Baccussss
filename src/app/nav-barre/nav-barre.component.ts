@@ -6,5 +6,9 @@ import {CookieService} from 'ngx-cookie-service';
   templateUrl: './nav-barre.component.html',
   styleUrls: ['./nav-barre.component.css']
 })
-export class NavBarreComponent{
+export class NavBarreComponent implements OnInit{
+  constructor() {
+  }
+  ngOnInit(): void {
+  }
 }

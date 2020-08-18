@@ -6,8 +6,10 @@ import {NavBarreComponent} from './nav-barre/nav-barre.component';
 import {FooterComponent} from './footer/footer.component';
 import {HomeComponent} from './home';
 import {TwitchComponent} from './twitch';
-import {LoginComponent} from './login';
-import { LogstateComponent } from './logstate/logstate.component';
+import {LogedinComponent} from './logedin';
+import {LogstateComponent} from './logstate/logstate.component';
+import { LoginComponent } from './login/login.component';
+import { PannelComponent } from './pannel/pannel.component';
 
 @NgModule({
   declarations: [
@@ -16,12 +18,14 @@ import { LogstateComponent } from './logstate/logstate.component';
     FooterComponent,
     HomeComponent,
     TwitchComponent,
+    LogedinComponent,
+    LogstateComponent,
     LoginComponent,
-    LogstateComponent
+    PannelComponent
   ],
   imports: [
     appRoutingModule,
-    BrowserModule
+    BrowserModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
