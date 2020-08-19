@@ -2,25 +2,25 @@
   display: flex;
   font-size: 1.2vw;
   align-items: center;
-  color: white;
+  color: black;
   cursor: pointer;
   min-height: 32px;
   min-width: 60px;
   border-radius: 5%;
   border: solid 1px black;
   padding: .1vh 1.2vw;
-  background: #7A2134;
+  background: #c48dd8;
   transition: transfrom .5s;
 }
 
 #loginbutton a {
   font-family: "Avenir Book", serif;
-  color: white;
+  color: black;
   text-decoration: none;
 }
 
 #loginbutton a:visited{
-  color: white;
+  color: black;
   text-decoration: none;
 }
 
@@ -36,8 +36,9 @@
   border-radius: 5%;
   border: solid 1px black;
   padding: .3vh 1.2vw;
-  background: #F2B3CA;
+  background: #c48dd8;
 }
+
 #profile img{
   color: rgba(255,255,255,0.7);
   line-height: 23px;
@@ -50,12 +51,13 @@
   min-width: 30px;
   border-radius: 50%;
 }
+
 #profile a{
   line-height: 23px;
   cursor: pointer;
   box-sizing: border-box;
   border: 0;
-  font-family: "Avenir Book", serif;
+  font-family: Avenir Medium, serif;
   font-size: 1.2vw;
   text-overflow: ellipsis;
   padding-left: 1vw;
