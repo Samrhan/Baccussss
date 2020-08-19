@@ -1,24 +1,43 @@
 <app-nav-barre></app-nav-barre>
 <div class="scroll-windows">
-  <div class="twitch">
-    <div class="twitch-video">
-      <iframe
-        src="https://player.twitch.tv/?channel=baccussss&parent=localhost&autoplay=false"
-        frameborder="0"
-        scrolling="no"
-        allowfullscreen="true"
-        height="480px"
-        width="720px">
-      </iframe>
-    </div>
-    <div class="twitch-chat">
-      <iframe
-        frameborder="0"
-        scrolling="no"
-        src="https://www.twitch.tv/embed/baccussss/chat?darkpopout&parent=localhost"
-        height="480px"
-        width="320px">
-      </iframe>
+  <div class="container">
+    <div class="twitch row no-gutters">
+      <div class="twitch-video col-8 col-md-8">
+        <iframe
+          src="https://player.twitch.tv/?channel=baccussss&parent=localhost&autoplay=false"
+          frameborder="0"
+          scrolling="no"
+          allowfullscreen="true"
+          height="480px"
+          width="100%">
+        </iframe>
+      </div>
+      <div class="twitch-chat col-6 col-sm-4">
+        <iframe
+          frameborder="0"
+          scrolling="no"
+          src="https://www.twitch.tv/embed/baccussss/chat?darkpopout&parent=localhost"
+          height="480px"
+          width="320px">
+        </iframe>
+      </div>
+      <div class="w-100"></div>
+      <div class="follow-sub col-8">
+        <a href="https://www.twitch.tv/baccussss" target="_blank" role="button" class="followbutton btn btn-light">
+          <svg class="bi bi-heart" width="20px" height ="20px" viewBox="0 0 20 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M8 2.748l-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z"/>
+          </svg> Suivre
+        </a>
+        <a href="https://www.twitch.tv/subs/baccussss" target="_blank" role="button" class="subbutton btn btn-light">
+          <svg width="20px" height="20px" viewBox="0 0 16 16" class="bi bi-cash-stack" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path d="M14 3H1a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1h-1z"/>
+            <path fill-rule="evenodd" d="M15 5H1v8h14V5zM1 4a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1V5a1 1 0 0 0-1-1H1z"/>
+            <path d="M13 5a2 2 0 0 0 2 2V5h-2zM3 5a2 2 0 0 1-2 2V5h2zm10 8a2 2 0 0 1 2-2v2h-2zM3 13a2 2 0 0 0-2-2v2h2zm7-4a2 2 0 1 1-4 0 2 2 0 0 1 4 0z"/>
+          </svg> S'abonner
+        </a>
+      </div>
+      <div class="sub col-4">
+        
+      </div>
     </div>
   </div>
 </div>
