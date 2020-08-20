@@ -1,6 +1,6 @@
 #loginbutton {
   display: flex;
-  font-size: 1.2vw;
+  font-size: auto;
   align-items: center;
   color: black;
   cursor: pointer;
@@ -58,7 +58,7 @@
   box-sizing: border-box;
   border: 0;
   font-family: Avenir Medium, serif;
-  font-size: 1.2vw;
+  font-size: auto;
   text-overflow: ellipsis;
   padding-left: 1vw;
   color: black;
