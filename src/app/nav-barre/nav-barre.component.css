@@ -4,11 +4,11 @@
 
 .name {
   font-family: Avenir Heavy, serif;
-  font-size: 1.5vw;
+  font-size: 150%;
 }
 
 .onglet {
-  font-size: 1vw;
+  font-size: auto;
   letter-spacing: .59px;
   font-family: Avenir Medium, serif;
   color: white;
@@ -26,4 +26,12 @@
 
 .logo {
   margin-right: 10px;
+}
+
+.social {
+  letter-spacing: .59px;
+  font-family: Avenir Medium, serif;
+  font-size: auto;
+  color: white;
+  opacity: 0.8;
 }

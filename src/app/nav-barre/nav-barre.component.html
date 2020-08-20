@@ -1,24 +1,13 @@
-<!--<div class="row navbar">
-  <a routerLink="" class="col-2 name">BACCUSSSS</a>
-  <div class="col">
-    <a routerLink="twitch" class="onglet">Twitch</a>
-    <a routerLink="" class="onglet">Discord</a>
-    <a routerLink="" class="onglet">Xi</a>
-  </div>
-  <a class="col"><app-logstate></app-logstate></a>
-</div>-->
-
 <div class="container-fullwidth">
   <nav class="navbar navbar-expand-lg navbar-dark">
-    <a class="navbar-brand name" routerLink="">BACCUSSSS</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText"
-            aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+    <a class="navbar-brand name" href="#">BACCUSSSS</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarText">
       <ul class="navbar-nav mr-auto">
-        <li class="nav-item ">
-          <a class="nav-link onglet" routerLink="/twitch">
+        <li class="nav-item">
+          <a class="nav-link onglet" routerLink="twitch">
             <img class="logo" src="/assets/logo_twitch.svg" alt="Twitch" width="25" title="Twitch"/>Twitch
           </a>
         </li>
@@ -31,8 +20,25 @@
             <img class="logo" src="/assets/logo_xi.svg" alt="Xi" width="25" title="Xi"/>Xi</a>
         </li>
       </ul>
+      <ul class="navbar-nav social">
+        <li class="nav-item">
+          <a class="nav-link onglet" target="_blank" href="https://twitter.com/baccussss">
+            <img class="logo" src="/assets/logo_twitter.svg" alt="Twitter" width="25" title="Twitter"/><span class="d-md-inline d-lg-none">Twitter</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link onglet" target="_blank" href="https://www.youtube.com/channel/UCAZE4p087t3RKyyBkFkA2Vw">
+            <img class="logo" src="/assets/logo_yt.svg" alt="YouTube" width="25" title="YouTube"/><span class="d-md-inline d-lg-none">YouTube</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link onglet" target="_blank" href="https://www.instagram.com/eliott_frechard/">
+            <img class="logo" src="/assets/logo_insta.svg" alt="Instagram" width="25" title="Instagram"/><span class="d-md-inline d-lg-none">Instagram</span>
+          </a>
+        </li>
+      </ul>
       <span class="navbar-item profil">
-        <app-logstate routerLink="/pannel"></app-logstate>
+        <app-logstate></app-logstate>
       </span>
     </div>
   </nav>
