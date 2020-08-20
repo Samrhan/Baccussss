@@ -36,7 +36,7 @@
 }
 
 body {
-  background: #34383c url("assets/Baccusss banniere p.svg") no-repeat;
+  background: #34383c url("assets/Baccusss banniere p.svg") no-repeat fixed;
   background-size: 200%;
 }
 

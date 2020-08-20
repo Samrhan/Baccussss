@@ -1,0 +1,121 @@
+a, a:hover, a:focus {
+  color: white;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+.wrapper {
+  display: flex;
+  align-items: stretch;
+  overflow: hidden;
+}
+
+#sidebar {
+  position: fixed;
+  min-width: 250px;
+  max-width: 250px;
+  background: black;
+  height: 100vh;
+  color: #aaaaaa;
+  transition: all 0.3s;
+  font-family: Avenir Book, serif, sans-serif;
+}
+
+#sidebar.active {
+  margin-left: -250px;
+}
+
+#sidebar .sidebar-header {
+  padding: 20px;
+  background: black;
+}
+
+#sidebar ul.components {
+  padding: 20px 10px;
+  border-bottom: 1px solid #c48dd8;
+}
+
+#sidebar ul li a {
+  padding: 10px;
+  font-size: 1.1em;
+  display: block;
+  border-radius: 15px;
+  border: 2px solid black;
+}
+
+#sidebar ul li a:hover {
+  color: black;
+  background: #c48dd8;
+}
+
+#sidebar ul li.active > a, a[aria-expanded="true"] {
+  color: black;
+  background: #c48dd8;
+}
+
+
+a[data-toggle="collapse"] {
+  position: relative;
+}
+
+a[aria-expanded="false"]::before, a[aria-expanded="true"]::before {
+  content: '\e259';
+  display: block;
+  position: absolute;
+  right: 20px;
+  font-size: 0.6em;
+}
+
+a[aria-expanded="true"]::before {
+  content: '\e260';
+}
+
+ul ul a {
+  font-size: 0.9em !important;
+  padding-left: 30px !important;
+  background: #c48dd8;
+}
+
+ul.CTAs {
+  padding: 20px;
+}
+
+ul.CTAs a {
+  text-align: center;
+  font-size: 0.9em !important;
+  display: block;
+  border-radius: 5px;
+  margin-bottom: 5px;
+}
+
+a.disconnect {
+  cursor: pointer;
+  background: #c48dd8;
+  color: #111111;
+}
+
+a.article, a.article:hover {
+  background: #6d7fcc !important;
+  color: #fff !important;
+}
+
+@media (max-width: 768px) {
+  #sidebar {
+    position: relative;
+    margin-left: -250px;
+  }
+
+  #sidebar.active {
+    margin-left: 0;
+  }
+
+  #sidebarCollapse span {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) {
+  #sidebarCollapse {
+    display: none;
+  }
+}

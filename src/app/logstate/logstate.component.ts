@@ -1,6 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {CookieService} from 'ngx-cookie-service';
 import {Router} from '@angular/router';
+import {XiapiService} from '../services/xiapi.service';
+
 
 @Component({
   selector: 'app-logstate',
@@ -13,18 +15,20 @@ export class LogstateComponent implements OnInit {
   userId: string;
   avatar: string;
   tag: string;
-  constructor(private cookieService: CookieService, private router: Router) {
+  data: string;
+
+  constructor(private cookieService: CookieService, private router: Router, private xi: XiapiService) {
   }
 
-  ngOnInit(): void {
-    this.userId = this.cookieService.get('user');
-    this.avatar = this.cookieService.get('avatar');
-    this.tag = this.cookieService.get('tag');
+  async ngOnInit(): Promise<void> {
+    this.userId = this.cookieService.get('id');
+    console.log(this.userId);
+    if (this.userId !== '') {
+      this.data = await this.xi.fetchUserInfo(this.userId);
+      const json = JSON.parse(this.data);
+      this.tag = json.tag;
+      this.avatar = json.pdp;
+    }
     this.loged = this.userId !== '';
   }
-
-  redirect(): void{
-    this.router.navigateByUrl('pannel');
-  }
-
 }
