@@ -12,7 +12,7 @@ export class EncryptService {
   }
 
   genState(): string {
-    const stateuuid = SHA256(Date.now().toString() + '5485714221fjhqshbFHdSDF4756').toString();
+    const stateuuid = SHA256(`${Date.now().toString()}5485714221fjhqshbFHdSDF4756`).toString();
     this.cookieService.set('uuid', stateuuid);
     return stateuuid;
   }
@@ -21,7 +21,19 @@ export class EncryptService {
     return uuid === this.cookieService.get('uuid');
   }
 
-  getApiToken(id): string {
+  getApiTokenInfos(id): string {
+    return SHA256(`${new Date().getMinutes().toString()}${id}`).toString();
+  }
+
+  getApiTokenTag(id): string {
+    return SHA256(`${new Date().getMinutes().toString()}${id}`).toString();
+  }
+
+  getApiTokenRegister(id): string {
+    return SHA256(`${new Date().getMinutes().toString()}${id}`).toString();
+  }
+
+  getApiTokenTwitch(id): string {
     return SHA256(`${new Date().getMinutes().toString()}${id}`).toString();
   }
 }

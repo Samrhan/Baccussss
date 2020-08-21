@@ -1,0 +1,45 @@
+<div class="wrapper">
+  <!-- Sidebar Holder -->
+  <nav id="sidebar">
+    <div class="sidebar-header">
+      <h3>Menu</h3>
+    </div>
+
+    <ul class="list-unstyled components">
+      <li id="dashboard" (click)="active('dashboard')">
+        <a routerLink="dashboard">Tableau de Bord</a>
+      </li>
+      <li id="connexions" (click)="active('connexions')">
+        <a routerLink="connexions">Connexions</a>
+      </li>
+      <li id="playlists" (click)="active('playlists')">
+        <a>Playlists</a>
+      </li>
+      <li id="xicraft" (click)="active('xicraft')">
+        <a>Xicraft</a>
+      </li>
+      <li id="datas" (click)="active('datas')">
+        <a>Mes Données</a>
+      </li>
+      <li id="contact" (click)="active('contact')">
+        <a>Contact</a>
+      </li>
+    </ul>
+
+    <ul class="list-unstyled CTAs">
+      <li><a class="disconnect" (click)="disconnect()">Se Déconnecter</a></li>
+    </ul>
+  </nav>
+
+  <!-- Page Content Holder -->
+  <div id="content">
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a id="sidebarCollapse" class="btn btn-default" onclick="$('#sidebar').toggleClass('active');"><span
+            class="glyphicon glyphicon-align-justify"></span></a>
+        </div>
+      </div>
+    </nav>
+  </div>
+</div>

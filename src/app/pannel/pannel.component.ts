@@ -11,23 +11,25 @@ import {XiapiService} from '../services/xiapi.service';
 export class PannelComponent implements OnInit {
   userId: any;
   data: any;
+  json: any;
+  tlogged = true;
 
   constructor(private cookieService: CookieService, private router: Router, private xi: XiapiService) {
   }
 
   ngOnInit(): void {
-    this.userId = this.cookieService.get('user');
+    if (this.router.url === '/pannel') {
+      this.router.navigateByUrl('pannel/dashboard');
+    }
+    /*this.userId = this.cookieService.get('id');
     if (this.userId === '') {
       this.router.navigateByUrl('login');
-    }
-    else{
-    }
+    } else {
+      this.data = await this.xi.fetchUserInfo(this.userId);
+      this.json = JSON.parse(this.data);
+      console.log(this.json);
+      this.tlogged = this.json.twitch !== undefined;
+      console.log(this.tlogged);
+    }*/
   }
-
-  async fetchUserData(): Promise<number> {
-    this.data = await this.xi.fetchUserInfo(this.userId);
-    console.log(this.data);
-    return this.data.xp;
-  }
-
 }
