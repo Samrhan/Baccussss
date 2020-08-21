@@ -1,5 +1,5 @@
-<div *ngIf="loged" id="profile" (click)="redirect()">
-  <img src="https://cdn.discordapp.com/avatars/{{userId}}/{{avatar}}.webp?size=32" alt="avatar">
+<div *ngIf="loged" id="profile" routerLink="/pannel">
+  <img *ngIf="avatar !== null" src="https://cdn.discordapp.com/avatars/{{userId}}/{{avatar}}.webp?size=32" alt="avatar">
   <a>
     {{tag}}
   </a>

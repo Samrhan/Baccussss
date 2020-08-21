@@ -19,7 +19,7 @@ export class LogedinComponent implements OnInit {
     const uuid = fragment.get('state');
     if (this.encrypt.isSameState(uuid)) {
       this.cookieService.delete('uuid');
-      this.discord.storeInCookie(tokenType, token);
+      this.discord.checkDB(tokenType, token);
     } else {
       this.router.navigateByUrl('');
     }

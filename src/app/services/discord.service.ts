@@ -1,28 +1,46 @@
-import { Injectable } from '@angular/core';
+import {Injectable} from '@angular/core';
 import {CookieService} from 'ngx-cookie-service';
 import {Router} from '@angular/router';
+import {XiapiService} from './xiapi.service';
 
 @Injectable({
   providedIn: 'root'
 })
 export class DiscordService {
 
-  constructor(private cookieService: CookieService, private router: Router) {
+  constructor(private cookieService: CookieService, private router: Router, private xi: XiapiService) {
   }
 
-   storeInCookie(tokenType, token): void{
+  async checkDB(tokenType, token): Promise<void> {
     fetch('https://discordapp.com/api/users/@me', {
       headers: {
         authorization: `${tokenType} ${token}`
       }
     })
       .then(res => res.json())
-      .then(response => {
-        this.cookieService.set('user', response.id);
-        this.cookieService.set('avatar', response.avatar);
-        this.cookieService.set('tag', response.username);
-        this.router.navigateByUrl('');
+      .then(async response => {
+        console.log(response);
+        const userId = response.id;
+        this.cookieService.set('id', response.id);
+        const sdata = await this.xi.fetchUserInfo(userId);
+        const datas = JSON.parse(sdata);
+        if (datas.tag === null) {
+          if (!(await this.xi.registerUser(userId, response.username, response.avatar, response.email))) {
+            await this.router.navigateByUrl('');
+          }
+        }
+        if (datas.mail === undefined) {
+          await this.xi.addMail(userId, response.email);
+        }
+        await this.xi.addPdp(userId, response.avatar);
+        await this.router.navigateByUrl('/pannel');
       })
       .catch(console.error);
+  }
+
+  disconnect(): void {
+    this.cookieService.deleteAll();
+
+    this.router.navigateByUrl('');
   }
 }
