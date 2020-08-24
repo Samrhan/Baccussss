@@ -36,9 +36,8 @@
 }
 
 body {
-  background: #34383c url("assets/Baccusss banniere p.svg") no-repeat;
-  background-size: 180%;
-  background-attachment: fixed;
+  background: #34383c url("assets/Baccusss banniere p.svg") no-repeat fixed;
+  background-size: 200%;
 }
 
 #HomeContainer {
@@ -52,6 +51,7 @@ body {
 .scroll-windows {
   /*Contient tout le texte de la page. Permet d'allouer
                  des espaces pour le footer et le header qui sont fixes*/
+  width: 99.5vw; /* ( ͡° ͜ʖ ͡°) */
   position: fixed;
   max-height: 100vh;
   overflow-y: scroll;
@@ -61,6 +61,7 @@ body {
   line-height: 23px;
   scroll-behavior: smooth;
   z-index: -1; /* Sinon on ne peut rien selectionner sur le menu déroulant */
+
 }
 
 .scroll-windows::-webkit-scrollbar-track /* Pour la barre de scroll */

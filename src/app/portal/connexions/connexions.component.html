@@ -1,0 +1,5 @@
+<a routerLink="/portal/twitchoauth" *ngIf="!tlogged">Se connecter</a>
+<h1 *ngIf="tlogged">Vous êtes connectés !</h1>
+<p *ngIf="json !== undefined && json.twitch !== undefined"><img src="{{json.twitch.url}}" alt="twitch"> Twitch : {{json.twitch.display_name}}</p>
+<p *ngIf="json !== undefined && json.minecraft !== undefined">Minecraft : {{json.minecraft}}</p>
+

@@ -9,11 +9,10 @@ import {TwitchComponent} from './twitch';
 import {LogedinComponent} from './logedin';
 import {LogstateComponent} from './logstate/logstate.component';
 import {LoginComponent} from './login/login.component';
-import {PannelComponent} from './pannel/pannel.component';
-import { TwitchoauthsuccessComponent } from './pannel/oauth/twitchoauthsuccess/twitchoauthsuccess.component';
-import { TwitchoauthComponent } from './pannel/oauth/twitchoauth/twitchoauth.component';
-import { SidebarpannelComponent } from './pannel/sidebarpannel/sidebarpannel.component';
-import { DashboardComponent } from './pannel/dashboard/dashboard.component';
+import {PortalComponent} from './portal/portal.component';
+import {TwitchoauthsuccessComponent} from './portal/oauth/twitchoauthsuccess/twitchoauthsuccess.component';
+import {TwitchoauthComponent} from './portal/oauth/twitchoauth/twitchoauth.component';
+import {SidebarComponent} from './portal/sidebar/sidebar.component';
 
 @NgModule({
   declarations: [
@@ -25,10 +24,10 @@ import { DashboardComponent } from './pannel/dashboard/dashboard.component';
     LogedinComponent,
     LogstateComponent,
     LoginComponent,
-    PannelComponent,
+    PortalComponent,
     TwitchoauthsuccessComponent,
     TwitchoauthComponent,
-    SidebarpannelComponent],
+    SidebarComponent],
   imports: [
     appRoutingModule,
     BrowserModule,
