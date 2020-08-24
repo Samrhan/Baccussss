@@ -1,0 +1,21 @@
+#dashboard p {
+  display: flex;
+  font-family: Avenir Book, serif, sans-serif;
+  font-size: 19px;
+  color: black;
+  line-height: 1.8em;
+  margin-top: 5px;
+}
+
+#top {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  align-items: center;
+}
+
+.progress {
+  margin-left: 50px;
+  height: 30px;
+  width: 50%;
+}

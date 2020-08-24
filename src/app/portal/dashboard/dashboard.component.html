@@ -1,0 +1,11 @@
+<div id="dashboard" *ngIf="json!==undefined">
+  <div id="top" *ngIf="json!==undefined" >
+    <img src="https://cdn.discordapp.com/avatars/{{userId}}/{{json.pdp}}.webp?size=128" alt="avatar">
+    <div class="progress">
+      <div class="progress-bar bg-info" role="progressbar" style="{{width}}" aria-valuenow="{{xp}}"
+           aria-valuemin="0"
+           aria-valuemax="{{xpmax}}">{{this.percent}}%
+      </div>
+    </div>
+  </div>
+</div>
