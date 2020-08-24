@@ -1,6 +1,6 @@
 import {Injectable} from '@angular/core';
 import {CookieService} from 'ngx-cookie-service';
-import {SHA256} from 'crypto-js';
+import {SHA256, AES} from 'crypto-js';
 
 
 @Injectable({
@@ -9,6 +9,10 @@ import {SHA256} from 'crypto-js';
 export class EncryptService {
 
   constructor(private cookieService: CookieService) {
+  }
+
+  minutes(): string {
+    return Math.round(new Date().getTime() / 1000 / 60).toString();
   }
 
   genState(): string {
@@ -22,18 +26,34 @@ export class EncryptService {
   }
 
   getApiTokenInfos(id): string {
-    return SHA256(`${new Date().getMinutes().toString()}${id}`).toString();
+    id = this.reconvertId(id);
+    return SHA256(`${this.minutes()}${id}`).toString();
   }
 
-  getApiTokenTag(id): string {
-    return SHA256(`${new Date().getMinutes().toString()}${id}`).toString();
+  getApiTokenConnexions(id): string {
+    id = this.reconvertId(id);
+    return SHA256(`${this.minutes()}${id}`).toString();
   }
 
   getApiTokenRegister(id): string {
-    return SHA256(`${new Date().getMinutes().toString()}${id}`).toString();
+    id = this.reconvertId(id);
+    return SHA256(`${this.minutes()}${id}`).toString();
   }
 
   getApiTokenTwitch(id): string {
-    return SHA256(`${new Date().getMinutes().toString()}${id}`).toString();
+    id = this.reconvertId(id);
+    return SHA256(`${this.minutes()}${id}`).toString();
+  }
+
+  convertId(userId): string {
+    const split = userId.match(/.{1,9}/g);
+    split[0] = parseInt(split[0], 10).toString(34);
+    split[1] = parseInt(split[1], 10).toString(35);
+    return split[0] + 'z' + split[1];
+  }
+
+  reconvertId(userId): string {
+    const id = userId.split('z');
+    return parseInt(id[0], 34).toString() + parseInt(id[1], 35).toString();
   }
 }
